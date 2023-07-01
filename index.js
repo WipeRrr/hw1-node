@@ -1,9 +1,4 @@
 const contacts = require("./contacts");
-// const argv = require("yargs").argv;
-
-
-// console.log(argv);
-
 
 const { Command } = require("commander");
 const program = new Command();
@@ -36,8 +31,8 @@ const invokeAction = async ({ action, name, id, email, phone }) => {
       break;
 
     case "remove":
-          const deleteContacts = await contacts.removeContact(id)
-          return console.log(deleteContacts)
+      const deleteContacts = await contacts.removeContact(id);
+      return console.log(deleteContacts);
       break;
 
     default:
@@ -46,12 +41,3 @@ const invokeAction = async ({ action, name, id, email, phone }) => {
 };
 
 invokeAction(argv);
-// invokeAction({ action: "list" });
-// invokeAction({ action: "get", id: "drsAJ4SHPYqZeG-83QTVW" });
-// invokeAction({
-//   action: "add",
-//   name: "Vasiliy Pupkin",
-//   email: "vasiliycool@mail.com",
-//   phone: "22-33-44",
-// });
-//  invokeAction({ action: "remove", id: "_Anpz15rKp8GJQOneq-qt" });
