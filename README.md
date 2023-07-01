@@ -1,3 +1,3 @@
 # hw1-node
 
-![alt text](hw1.png)
+![alt text](./hw1.PNG)
